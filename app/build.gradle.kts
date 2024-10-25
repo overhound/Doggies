@@ -58,6 +58,7 @@ dependencies {
     implementation(libs.koin.compose)
     implementation(libs.koin.navigation)
     implementation(libs.koin.startup)
+    implementation(libs.mockk)
     implementation(libs.coil)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
