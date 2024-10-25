@@ -40,6 +40,7 @@ import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.ot.doggies.R
+import com.ot.doggies.ui.theme.LightGrey
 import com.ot.doggies.ui.viewmodel.BreedFeedViewModel
 import org.koin.androidx.compose.koinViewModel
 
@@ -214,7 +215,7 @@ private fun ShowDivider(
 ) {
     if (index < totalItems - 1) {
         HorizontalDivider(
-            color = MaterialTheme.colorScheme.tertiary,
+            color = LightGrey,
             thickness = 1.dp,
             modifier = Modifier.padding(vertical = 8.dp, horizontal = padding)
         )

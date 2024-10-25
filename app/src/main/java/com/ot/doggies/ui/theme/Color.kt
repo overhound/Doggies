@@ -10,6 +10,7 @@ val BackgroundDark1 = Color(0xFF333333)
 val PurpleGrey80 = Color(0xFFCCC2DC)
 val Text = Color(0xFF000000)
 val TextDark = Color(0xFFFFFFFF)
+val LightGrey = Color(0xFFDEDEDE)
 val Pink80 = Color(0xFFEFB8C8)
 
 val Purple40 = Color(0xFF6650a4)
