@@ -12,13 +12,14 @@ import kotlinx.coroutines.test.UnconfinedTestDispatcher
 import kotlinx.coroutines.test.resetMain
 import kotlinx.coroutines.test.setMain
 import org.junit.jupiter.api.extension.AfterAllCallback
+import org.junit.jupiter.api.extension.BeforeAllCallback
 import org.junit.jupiter.api.extension.ExtensionContext
 import org.junit.rules.TestWatcher
 
 @OptIn(ExperimentalCoroutinesApi::class)
 class CoroutineTestRule(
     val dispatcher: TestDispatcher = UnconfinedTestDispatcher(TestCoroutineScheduler())
-) : TestWatcher(), org.junit.jupiter.api.extension.BeforeAllCallback,
+) : TestWatcher(), BeforeAllCallback,
    AfterAllCallback {
     val testDispatcherProvider = object : DispatcherProvider {
         override fun io(): CoroutineDispatcher = dispatcher
