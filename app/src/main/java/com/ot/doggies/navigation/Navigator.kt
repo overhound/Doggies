@@ -15,7 +15,9 @@ class Navigator(private val navController: NavController) {
     }
 
     fun navigateToBreedDetail(breed: String, subBreed: String) =
-        navController.navigate(route = "${AppScreens.BreedDetailScreen.path}/$breed/$subBreed")
+        navController.navigate(route = "${AppScreens.BreedDetailScreen.path}/$breed/$subBreed") {
+            launchSingleTop = true
+        }
 
 }
 
