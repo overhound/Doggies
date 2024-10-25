@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Doggies</string>
+    <string name="content_description_app_logo">App logo</string>
+    <string name="content_description_collapse">Collapse</string>
+</resources>
