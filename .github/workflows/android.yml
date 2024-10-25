@@ -25,10 +25,6 @@ jobs:
           java-version: 18.0.2
           distribution: 'temurin'
           cache: 'gradle'
-        env:
-          ROOM_CIPHER: ${{ secrets.ROOM_CIPHER }}
-          WEB_CLIENT_ID: ${{ secrets.WEB_CLIENT_ID }}
-          KEY_STORE: ${{ secrets.KEY_STORE }}
 
       - name: Grant execute permissions
         run: chmod +x gradlew

@@ -4,6 +4,7 @@ kotlin = "2.0.0"
 kotlinSerializer = "1.9.22"
 coreKtx = "1.13.1"
 junit = "4.13.2"
+mockk = "1.13.13"
 junitVersion = "1.2.1"
 espressoCore = "3.6.1"
 lifecycleRuntimeKtx = "2.8.6"
@@ -16,10 +17,17 @@ retrofit = "2.11.0"
 retrofitConverter = "1.0.0"
 loggingInterceptor = "4.11.0"
 coil = "2.7.0"
-
+coroutines = "1.9.0"
+turbine = "1.1.0"
+truth = "1.1.5"
+jupiter="5.11.2"
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
+kotlin-coroutines = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-test", version.ref = "coroutines" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
+turbine = { group = "app.cash.turbine", name = "turbine", version.ref = "turbine" }
+truth = { group = "com.google.truth", name = "truth", version.ref = "truth" }
+mockk = { group = "io.mockk", name = "mockk", version.ref = "mockk" }
 androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
 androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
 androidx-lifecycle-runtime-ktx = { group = "androidx.lifecycle", name = "lifecycle-runtime-ktx", version.ref = "lifecycleRuntimeKtx" }
@@ -43,6 +51,8 @@ okhttp = { group = "com.squareup.okhttp3", name = "logging-interceptor", version
 retrofit = { group = "com.squareup.retrofit2", name = "retrofit", version.ref = "retrofit" }
 retrofit-converter = { group = "com.jakewharton.retrofit", name = "retrofit2-kotlinx-serialization-converter", version.ref = "retrofitConverter" }
 coil = { group = "io.coil-kt", name = "coil-compose", version.ref = "coil" }
+junit-jupiter-api = { module = "org.junit.jupiter:junit-jupiter-api", version = "jupiter" }
+
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
