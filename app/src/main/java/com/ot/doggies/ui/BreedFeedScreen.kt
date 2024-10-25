@@ -2,7 +2,6 @@ package com.ot.doggies.ui
 
 import androidx.compose.animation.animateContentSize
 import androidx.compose.foundation.Image
-import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.layout.Column
@@ -32,7 +31,7 @@ import androidx.compose.runtime.mutableStateMapOf
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.ColorFilter
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontStyle
@@ -41,7 +40,6 @@ import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.ot.doggies.R
-import com.ot.doggies.ui.theme.Background
 import com.ot.doggies.ui.viewmodel.BreedFeedViewModel
 import org.koin.androidx.compose.koinViewModel
 
@@ -55,12 +53,13 @@ fun BreedFeedScreen(
 
     Column(
         modifier = modifier
-            .fillMaxSize()
-            .background(Color.White),
+            .padding(top = 24.dp)
+            .fillMaxSize(),
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
         Image(
             painter = painterResource(R.drawable.dog_api_logo),
+            colorFilter = ColorFilter.tint(MaterialTheme.colorScheme.onBackground),
             contentDescription = stringResource(R.string.content_description_app_logo),
             modifier = Modifier
                 .size(32.dp)
@@ -86,7 +85,7 @@ fun BreedFeed(
             .fillMaxWidth()
             .animateContentSize()
             .padding(16.dp),
-        colors = CardDefaults.cardColors(containerColor = Background),
+        colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surfaceContainer),
         elevation = CardDefaults.cardElevation(1.dp)
     ) {
         LazyColumn(
@@ -215,7 +214,7 @@ private fun ShowDivider(
 ) {
     if (index < totalItems - 1) {
         HorizontalDivider(
-            color = Color.LightGray,
+            color = MaterialTheme.colorScheme.tertiary,
             thickness = 1.dp,
             modifier = Modifier.padding(vertical = 8.dp, horizontal = padding)
         )
